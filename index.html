@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bono Juancito Pinto 2025</title>
+    <link rel="icon" href="images/ite.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/preguntas.css">
+    <style>
+        :root {
+            --primary-color: rgb(38,186,165);
+            --secondary-color: rgb(55,95,122);
+            --light-gray: #f8f9fa;
+            --mint-green: #e0f2f1;
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: var(--text-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: 65px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: zoom-pulse 2s infinite;
+        }
+
+        @keyframes zoom-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-light);
+           ;cursor: pointer;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .amount {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+        }
+
+        .hero .date {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--text-light);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--mint-green);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about, .requirements, .banks, .contact {
+            background: var(--light-gray);
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .about .icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .about .icons i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .requirements .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--text-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .timeline {
+            text-align: center;
+            background: var(--mint-green);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid var(--primary-color);
+        }
+
+        .timeline i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .banks .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .bank-card {
+            background: var(--text-light);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .bank-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bank-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp i {
+            font-size: 2rem;
+        }
+
+        footer {
+            background: #2a4a5e;
+            color: var(--text-light);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer .logo {
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        footer .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary-color);
+                padding: 1rem;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .amount {
+                font-size: 3rem;
+            }
+
+            .hero .date {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Bono Juancito Pinto Logo" class="logo">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#monto">Monto</a>
+                <a href="#requisitos">Requisitos</a>
+                <a href="#cronograma">Cronograma</a>
+                <a href="#bancos">Bancos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Bono Juancito Pinto 2025</h1>
+        <div class="amount">Bs. 200</div>
+        <div class="date">Inicio de Pagos: 13 de Octubre de 2025</div>
+        <a href="#monto" class="btn">Conocer Más</a>
+    </section>
+
+    <section id="monto" class="about">
+        <h2>¿Qué es el Bono Juancito Pinto?</h2>
+        <p>El Bono Juancito Pinto es una iniciativa del gobierno boliviano que busca apoyar la permanencia escolar de niños y niñas en el sistema educativo, promoviendo la igualdad de oportunidades y el desarrollo social.</p>
+        <div class="icons">
+            <i class="fas fa-book"></i>
+            <i class="fas fa-child"></i>
+            <i class="fas fa-hand-holding-usd"></i>
+        </div>
+    </section>
+
+    <section id="requisitos" class="requirements">
+        <h2>Requisitos para Acceder al Bono</h2>
+        <ul style="list-style: none; padding: 0; font-size: 1.2rem;">
+            <li style="background: var(--mint-green); margin: 10px 0; padding: 15px; border-radius: 10px; display: flex; align-items: center;">
+                <i class="fas fa-id-card" style="font-size: 1.5rem; color: var(--primary-color); margin-right: 10px;"></i>
+                Carnet de identidad del padre, madre o tutor.
+            </li>
+            <li style="background: var(--light-gray); margin: 10px 0; padding: 15px; border-radius: 10px; display: flex; align-items: center;">
+                <i class="fas fa-copy" style="font-size: 1.5rem; color: var(--primary-color); margin-right: 10px;"></i>
+                Una fotocopia simple del carnet.
+            </li>
+            <li style="background: var(--mint-green); margin: 10px 0; padding: 15px; border-radius: 10px; display: flex; align-items: center;">
+                <i class="fas fa-times-circle" style="font-size: 1.5rem; color: var(--primary-color); margin-right: 10px;"></i>
+                No se exige carnet de vacunación ni carnet del estudiante.
+            </li>
+        </ul>
+    </section>
+
+    <section id="cronograma" class="timeline">
+        <h2>Cronograma</h2>
+        <i class="fas fa-hourglass-half"></i>
+        <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 1.5rem;">
+            <thead>
+                <tr style="background-color: var(--primary-color); color: var(--text-light);">
+                    <th style="padding: 15px; border: 1px solid var(--secondary-color);">Fecha</th>
+                    <th style="padding: 15px; border: 1px solid var(--secondary-color);">Terminaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">13 al 19 de octubre</td>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">1 y 2</td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">20 al 26 de octubre</td>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">3 y 4</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">27 de octubre al 2 de noviembre</td>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">5 y 6</td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">3 al 9 de noviembre</td>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">7 y 8</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">10 al 16 de noviembre</td>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">0 y 9</td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">17 al 29 de noviembre</td>
+                    <td style="padding: 15px; border: 1px solid var(--secondary-color);">Rezagados (sin restricción)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="bancos" class="banks">
+        <h2>Bancos Habilitados para el Pago</h2>
+        <div class="grid">
+            <div class="bank-card"><a target="_blank" href="https://www.bancofortaleza.com.bo/agencias/"  ><img src="images/bancos/1.jpg" alt="Banco 1"></a></div>
+            <div class="bank-card"> <a target="_blank" href="https://www.prodem.bo/Cobertura"> <img src="images/bancos/2.jpg" alt="Banco 2"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/3.png" alt="Banco 3"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/4.png" alt="Banco 4"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/5.jpg" alt="Banco 5"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/6.jpg" alt="Banco 6"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/7.jpg" alt="Banco 7"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/8.png" alt="Banco 8"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/9.jpeg" alt="Banco 9"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/10.jpeg" alt="Banco 10"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/11.png" alt="Banco 11"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/12.png" alt="Banco 12"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/13.png" alt="Banco 13"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/14.png" alt="Banco 14"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/15.jpeg" alt="Banco 15"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/16.jpg" alt="Banco 16"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/17.jpeg" alt="Banco 17"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/18.jpg" alt="Banco 18"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/19.jpg" alt="Banco 19"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/20.png" alt="Banco 20"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/21.jpg" alt="Banco 21"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/22.jpg" alt="Banco 22"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/23.png" alt="Banco 23"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/24.png" alt="Banco 24"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/25.jpeg" alt="Banco 25"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/26.jpg" alt="Banco 26"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/27.jpeg" alt="Banco 27"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/28.jpg" alt="Banco 28"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/29.jpeg" alt="Banco 29"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/30.jpeg" alt="Banco 30"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/31.jpg" alt="Banco 31"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/32.png" alt="Banco 32"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/33.png" alt="Banco 33"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/34.png" alt="Banco 34"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/35.png" alt="Banco 35"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/36.jpg" alt="Banco 36"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/37.jpeg" alt="Banco 37"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/38.jpeg" alt="Banco 38"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/39.png" alt="Banco 39"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/40.png" alt="Banco 40"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/41.png" alt="Banco 41"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/42.png" alt="Banco 42"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/43.png" alt="Banco 43"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/44.jpeg" alt="Banco 44"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/45.png" alt="Banco 45"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/46.png" alt="Banco 46"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/47.png" alt="Banco 47"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/48.png" alt="Banco 48"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/49.jpeg" alt="Banco 49"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/50.jpeg" alt="Banco 50"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/51.png" alt="Banco 51"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/52.png" alt="Banco 52"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/53.png" alt="Banco 53"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/54.jpeg" alt="Banco 54"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/55.png" alt="Banco 55"></a></div>
+            <div class="bank-card"><a target="_blank" href="#"><img src="images/bancos/56.jpg" alt="Banco 56"></a></div>
+            <!-- Agregar más imágenes si es necesario -->
+        </div>
+    </section>
+
+    <section id="entidades" class="banks">
+        <h2>Entidades Financieras Habilitadas</h2>
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 1.2rem;">
+            <thead>
+                <tr style="background-color: var(--primary-color); color: var(--text-light);">
+                    <th style="padding: 10px; border: 1px solid var(--secondary-color);">Entidad Financiera</th>
+                    <th style="padding: 10px; border: 1px solid var(--secondary-color);">Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Unión</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Fortaleza</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Pyme Ecofuturo</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Prodem SA</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Pyme de la Comunidad</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Crecer IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Diaconía IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">CIDRE IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Fundación Pro Mujer IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Asociación Incubadora de Microempresas Productivas IMPRO IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">FONDECO IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">IDEPRO IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">FUBODE IFD</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr style="background-color: var(--mint-green);">
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">La Promotora EFV</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">El Progreso EFV</td>
+                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+                </tr>
+                <!-- Continuar con las demás entidades siguiendo el mismo formato -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="faq-section">
+        <h2 class="faq-title">Preguntas Frecuentes sobre el Bono Juancito Pinto 2025</h2>
+
+        <div class="faq-container">
+             <div class="faq-item">
+                <button class="faq-question">¿Cuándo comienza el pago del Bono Juancito Pinto 2025?</button>
+                    <div class="faq-answer">
+                        <p>El pago comienza el <strong>lunes 13 de octubre de 2025</strong> en todo el territorio nacional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Hasta qué fecha se puede cobrar el bono?</button>
+                    <div class="faq-answer">
+                        <p>El cobro se extenderá hasta el <strong>29 de noviembre de 2025</strong>. Desde el <strong>17 de noviembre</strong> podrán cobrar todos los rezagados sin restricción.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿El cronograma de pago es igual en todo el país?</button>
+                    <div class="faq-answer">
+                        <p>No. En las ciudades capitales y en El Alto el cobro se realiza según la <strong>terminación del carnet de identidad del tutor</strong>. En zonas rurales no hay restricción.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Cuál es el cronograma de pago por terminación de carnet?</button>
+                <div class="faq-answer">
+                    <ul>
+                    <li>13 al 19 de octubre: terminaciones <strong>1 y 2</strong></li>
+                    <li>20 al 26 de octubre: <strong>3 y 4</strong></li>
+                    <li>27 de octubre al 2 de noviembre: <strong>5 y 6</strong></li>
+                    <li>3 al 9 de noviembre: <strong>7 y 8</strong></li>
+                    <li>10 al 16 de noviembre: <strong>9 y 0</strong></li>
+                    <li>17 al 29 de noviembre: <strong>rezagados (sin restricción)</strong></li>
+                    </ul>
+                </div>
+                </div>
+
+                <!-- BENEFICIARIOS -->
+                <div class="faq-item">
+                <button class="faq-question">¿Quiénes pueden recibir el Bono Juancito Pinto 2025?</button>
+                <div class="faq-answer">
+                    <p>Todos los estudiantes regulares de unidades educativas <strong>fiscales y de convenio</strong> de los niveles <strong>Primaria, Secundaria y Educación Especial</strong>.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Los estudiantes de colegios privados pueden cobrar el bono?</button>
+                <div class="faq-answer">
+                    <p>No. El bono está dirigido únicamente a estudiantes del sistema <strong>fiscal y de convenio</strong>.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Los estudiantes de educación especial también reciben el bono?</button>
+                <div class="faq-answer">
+                    <p>Sí. Todos los estudiantes de educación especial pueden cobrar el bono, sin límite de edad.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Hay un límite de edad para cobrar en secundaria?</button>
+                <div class="faq-answer">
+                    <p>Sí. En el nivel secundario, el límite de edad es de <strong>21 años</strong>.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Qué pasa si un estudiante abandonó las clases?</button>
+                <div class="faq-answer">
+                    <p>Los estudiantes que abandonaron el año escolar <strong>no pueden cobrar</strong> el bono.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Cuántos estudiantes se benefician este año?</button>
+                <div class="faq-answer">
+                    <p>El bono beneficiará a <strong>2.324.149 estudiantes</strong> de todo el país.</p>
+                </div>
+                </div>
+
+                <!-- MONTO Y FINANCIAMIENTO -->
+                <div class="faq-item">
+                <button class="faq-question">¿De cuánto es el monto del Bono Juancito Pinto?</button>
+                <div class="faq-answer">
+                    <p>El monto es de <strong>Bs 200 por estudiante</strong>.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿De dónde provienen los recursos para pagar el bono?</button>
+                <div class="faq-answer">
+                    <p>El bono se financia principalmente con las <strong>utilidades de las empresas estatales</strong>, en el marco de la política social del Gobierno.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Cuánto dinero se destina al pago del bono en 2025?</button>
+                <div class="faq-answer">
+                    <p>Se destinarán aproximadamente <strong>Bs 474,3 millones</strong>, aportados por al menos <strong>27 empresas estatales</strong>.</p>
+                </div>
+                </div>
+
+                <!-- LUGAR Y FORMA DE COBRO -->
+                <div class="faq-item">
+                <button class="faq-question">¿Dónde se puede cobrar el Bono Juancito Pinto?</button>
+                <div class="faq-answer">
+                    <p>En cualquiera de las <strong>56 entidades financieras habilitadas</strong> en todo el país.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Qué bancos participan en el pago del bono?</button>
+                <div class="faq-answer">
+                    <p>El <strong>Banco Unión</strong> encabeza la lista, junto a bancos como <strong>Fortaleza, Prodem</strong> y cooperativas de ahorro y crédito.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Cómo se realiza el pago en áreas rurales?</button>
+                <div class="faq-answer">
+                    <p>Se envían <strong>brigadas móviles</strong> del Banco Unión y de las <strong>Fuerzas Armadas</strong> para garantizar el pago en comunidades alejadas.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Qué pasa si el tutor no puede cobrar personalmente?</button>
+                <div class="faq-answer">
+                    <p>Puede solicitar el <strong>cambio o autorización</strong> en el distrito educativo. Al día siguiente, la persona autorizada podrá realizar el cobro.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Dónde puedo ver la lista oficial de entidades habilitadas?</button>
+                <div class="faq-answer">
+                    <p>En la <strong>página web y redes sociales del Ministerio de Educación</strong>.</p>
+                </div>
+                </div>
+
+                <!-- REQUISITOS -->
+                <div class="faq-item">
+                <button class="faq-question">¿Qué documentos se necesitan para cobrar el bono?</button>
+                <div class="faq-answer">
+                    <ul>
+                    <li>Carnet de identidad vigente del padre, madre o tutor.</li>
+                    <li>Una fotocopia simple del carnet.</li>
+                    </ul>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Es necesario presentar el carnet del estudiante?</button>
+                <div class="faq-answer">
+                    <p>No. Solo se requiere el carnet del tutor o padre/madre de familia.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Se exige carnet de vacunación para el cobro?</button>
+                <div class="faq-answer">
+                    <p>No. El carnet de vacunación <strong>no es requisito</strong> para cobrar el bono.</p>
+                </div>
+                </div>
+
+                <!-- CONSULTAS -->
+                <div class="faq-item">
+                <button class="faq-question">¿Dónde se pueden hacer consultas o reclamos?</button>
+                <div class="faq-answer">
+                    <p>En el <strong>call center nacional del Ministerio de Educación</strong> o acudiendo a la unidad educativa, distrito o dirección departamental correspondiente.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Desde cuándo está habilitado el call center?</button>
+                <div class="faq-answer">
+                    <p>Desde el <strong>lunes 13 de octubre de 2025</strong>, día en que inicia el pago del bono.</p>
+                </div>
+                </div>
+
+                <!-- FINALIDAD -->
+                <div class="faq-item">
+                <button class="faq-question">¿Cuál es el objetivo del Bono Juancito Pinto?</button>
+                <div class="faq-answer">
+                    <p>El bono busca <strong>reducir la deserción escolar</strong> e incentivar la <strong>permanencia de los estudiantes</strong> en el sistema educativo público.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Desde cuándo existe el Bono Juancito Pinto?</button>
+                <div class="faq-answer">
+                    <p>Fue creado en el <strong>año 2006</strong> como parte de las políticas públicas de apoyo a la educación.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Por qué es importante este bono?</button>
+                <div class="faq-answer">
+                    <p>Porque <strong>apoya económicamente a las familias</strong> y motiva a los estudiantes a continuar y terminar sus estudios.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Qué departamentos tienen más beneficiarios?</button>
+                <div class="faq-answer">
+                    <p>Los departamentos con más beneficiarios son <strong>Santa Cruz, La Paz y Cochabamba</strong>, debido a su población estudiantil.</p>
+                </div>
+                </div>
+
+                <div class="faq-item">
+                <button class="faq-question">¿Qué empresas estatales financian el bono?</button>
+                <div class="faq-answer">
+                    <p>Entre las principales están <strong>YPFB, ENTEL, ENDE, BOA</strong> y otras empresas públicas que aportan parte de sus utilidades.</p>
+                </div>
+                </div>
+            
+        </div>
+    </section>
+
+
+
+    <section id="consultas" class="contact">
+        <h2>Consultas y Reclamos</h2>
+        <p>El Ministerio de Educación habilitará un call center nacional para atender dudas y reclamos. También se puede acudir a la unidad educativa, distrito o dirección departamental correspondiente.</p>
+    </section>
+
+    <a href="https://wa.me/+59171039910" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <img src="images/logo.png" alt="Bono Juancito Pinto Logo" class="logo">
+        <div class="links">
+            <a href="#inicio">Inicio</a>
+            <a href="#monto">Monto</a>
+            <a href="#requisitos">Requisitos</a>
+            <a href="#cronograma">Cronograma</a>
+            <a href="#bancos">Bancos</a>
+        </div>
+        <p>© 2025 Bono Juancito Pinto. Todos los derechos reservados.</p>
+        <p>Apoyando la educación para un futuro mejor.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        const faqItems = document.querySelectorAll(".faq-question");
+        faqItems.forEach(btn => {
+            btn.addEventListener("click", () => {
+            const answer = btn.nextElementSibling;
+            btn.classList.toggle("active");
+            answer.classList.toggle("show");
+            });
+        });
+        </script>
+</body>
+</html>
