@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/preguntas.css">
+    <link rel="stylesheet" href="css/tabla.css">
+    <link rel="stylesheet" href="css/tabla-entidades.css">
     <style>
         :root {
             --primary-color: rgb(38,186,165);
@@ -284,6 +286,46 @@
             color: var(--primary-color);
         }
 
+        /* Estilos mejorados para la tabla de entidades financieras */
+        #entidades table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        #entidades th, #entidades td {
+            padding: 15px;
+            border: 1px solid var(--secondary-color);
+        }
+
+        #entidades th {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        #entidades tr:nth-child(even) {
+            background-color: var(--mint-green);
+        }
+
+        #entidades tr:hover {
+            background-color: var(--primary-color);
+            
+            transition: background-color 0.3s ease;
+        }
+
+        #entidades a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #entidades a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -314,6 +356,14 @@
 
             .hero .date {
                 font-size: 1.2rem;
+            }
+
+            #entidades table {
+                font-size: 0.9rem;
+            }
+
+            #entidades th, #entidades td {
+                padding: 10px;
             }
         }
     </style>
@@ -470,79 +520,245 @@
         </div>
     </section>
 
-<!--     <section id="entidades" class="banks">
+    <section id="entidades" class="banks">
         <h2>Entidades Financieras Habilitadas</h2>
-        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 1.2rem;">
+        <table>
             <thead>
                 <tr style="background-color: var(--primary-color); color: var(--text-light);">
-                    <th style="padding: 10px; border: 1px solid var(--secondary-color);">Entidad Financiera</th>
-                    <th style="padding: 10px; border: 1px solid var(--secondary-color);">Enlace</th>
+                    <th >Entidad Financiera</th>
+                    <th >Enlace</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Unión</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
+            <tr >
+                <td >Banco Unión</td>
+                <td ><a href="https://www.bancounion.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr style="">
+                <td >Banco Fortaleza</td>
+                <td ><a href="https://www.bancofortaleza.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >Banco Pyme Ecofuturo</td>
+                <td ><a href="https://www.bancoecofuturo.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >Banco Prodem SA</td>
+                <td ><a href="https://www.prodem.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >Banco Pyme de la Comunidad</td>
+                <td><a href="https://bco.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >Crecer IFD</td>
+                <td><a href="https://www.crecerifd.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >Diaconía IFD</td>
+                <td><a href="https://www.diaconia.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >CIDRE IFD</td>
+                <td><a href="http://cidre.org.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >Fundación Pro Mujer IFD</td>
+                <td><a href="https://promujer.org.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >Asociación Incubadora de Microempresas Productivas IMPRO IFD</td>
+                <td><a href="https://www.improifd.org.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >FONDECO IFD</td>
+                <td><a href="https://fondeco.org/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >IDEPRO IFD</td>
+                <td><a href="https://www.idepro.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >FUBODE IFD</td>
+                <td><a href="https://www.fubode.org/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >La Promotora EFV</td>
+                <td><a href="https://www.lapromotora.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr >
+                <td >El Progreso EFV</td>
+                <td><a href="https://www.elprogresoefv.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <!-- Nuevas entidades financieras -->
+            <tr>
+                <td >Cooperativa de Ahorro y Crédito Abierta “La Merced”</td>
+                <td ><a href="https://www.lamerced.coop/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr style="background-color: var(--mint-green);">
+                <td >Cooperativa de Ahorro y Crédito Abierta “San Martín de Porres”</td>
+                <td ><a href="https://www.cosmart.coop/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >Cooperativa de Ahorro y Crédito Abierta “San Antonio”</td>
+                <td ><a href="https://www.cacsa.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr style="background-color: var(--mint-green);">
+                <td >Cooperativa de Ahorro y Crédito Abierta “San Carlos Borromeo”</td>
+                <td ><a href="http://www.coopsancarlos.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td >Cooperativa de Ahorro y Crédito Abierta “Madre y Maestra”</td>
+                <td ><a href="https://www.madreymaestra.com/" target="_blank">Visitar</a></td>
+            </tr>
+                <!-- Continuar con las demás entidades siguiendo el mismo formato -->
+                 <tr>
+                    <td>Cooperativa de Ahorro y Crédito Abierta “PIO X”</td>
+                    <td><a href="https://www.cooperativapiox.com/" target="_blank">Visitar</a></td>
                 </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Fortaleza</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Pyme Ecofuturo</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Prodem SA</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Banco Pyme de la Comunidad</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Crecer IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Diaconía IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">CIDRE IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Fundación Pro Mujer IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">Asociación Incubadora de Microempresas Productivas IMPRO IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">FONDECO IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">IDEPRO IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">FUBODE IFD</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr style="background-color: var(--mint-green);">
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">La Promotora EFV</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);">El Progreso EFV</td>
-                    <td style="padding: 10px; border: 1px solid var(--secondary-color);"><a href="#" target="_blank">Visitar</a></td>
-                </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San Roque”</td>
+                <td><a href="https://www.sanroque.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Loyola”</td>
+                <td><a href="https://www.cooperativaloyola.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Trinidad”</td>
+                <td><a href="https://cactri.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San Mateo”</td>
+                <td><a href="https://sanmateo.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Mons. Félix Gainza”</td>
+                <td><a href="https://www.gainza.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Comarapa”</td>
+                <td><a href="https://www.comarapa.coop/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Educadores Gran Chaco”</td>
+                <td><a href="https://coopechaco.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito “CACEF”</td>
+                <td><a href="https://www.facebook.com/cacef.rl/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Progreso”</td>
+                <td><a href="https://www.coopprogreso.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Magisterio Rural de Tarija”</td>
+                <td><a href="https://coopmagisteriorural.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Societaria “Cantera”</td>
+                <td><a href="https://cooperativacantera.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Cristo Rey de Cochabamba”</td>
+                <td><a href="https://cristorey.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San Pedro de Aiquile”</td>
+                <td><a href="https://coopsanpedroaiquile.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Catedral de Tarija”</td>
+                <td><a href="https://coopcatedraldetarija.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Societaria “San Martín”</td>
+                <td><a href="https://sanmartin.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Societaria “Virgen de los Remedios”</td>
+                <td><a href="https://www.coopcvr.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Societaria “USAMA”</td>
+                <td><a href="https://cooperativausama.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San Francisco Solano”</td>
+                <td><a href="https://sfs.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Solucredit San Silvestre”</td>
+                <td><a href="https://www.solucredit.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “COOPROLE”</td>
+                <td><a href="https://cooprole.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Catedral Potosí</td>
+                <td><a href="https://www.catedral.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Societaria “Paulo VI”</td>
+                <td><a href="https://www.cooppaulosexto.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Inca Huasi”</td>
+                <td><a href="https://www.cooperativaincahuasi.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Magisterio Rural de Chuquisaca”</td>
+                <td><a href="https://cmrsucre.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San Joaquín”</td>
+                <td><a href="https://coop-sanjoaquin.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “El Chorolque”</td>
+                <td><a href="https://www.chorolque.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Societaria Hospicio</td>
+                <td><a href="https://www.hospicio.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito “San José de Punata”</td>
+                <td><a href="https://www.coopsanjosepunata.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San José de Bermejo”</td>
+                <td><a href="https://www.coop-sanjosebjo.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “San Pedro”</td>
+                <td><a href="https://cooperativasanpedro.com/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Quillacollo”</td>
+                <td><a href="https://cooperativaquillacollo.com.bo/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Asunción”</td>
+                <td><a href="https://www.cas.com.bo/educacion.financiera/index.php/credito/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “Fátima”</td>
+                <td><a href="https://fatima.coop/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Jesús Nazareno</td>
+                <td><a href="https://www.jesus-nazareno.coop/" target="_blank">Visitar</a></td>
+            </tr>
+            <tr>
+                <td>Cooperativa de Ahorro y Crédito Abierta “La Sagrada Familia”</td>
+                <td><a href="https://coopsagradafamilia.com/" target="_blank">Visitar</a></td>
+            </tr>
             </tbody>
         </table>
-    </section> -->
+    </section>
 
     <section class="faq-section">
         <h2 class="faq-title">Preguntas Frecuentes sobre el Bono Juancito Pinto 2025</h2>

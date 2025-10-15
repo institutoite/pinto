@@ -1,0 +1,54 @@
+/* Estilos para la tabla de entidades financieras */
+#entidades table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+#entidades th, #entidades td {
+    padding: 15px;
+    border: 1px solid var(--secondary-color);
+}
+
+#entidades th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+#entidades tr:nth-child(even) {
+    background-color: var(--mint-green);
+}
+
+#entidades tr:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light); /* Asegura que el texto sea visible */
+    transition: background-color 0.3s ease;
+}
+
+#entidades a {
+    color: #fff; /* Texto blanco */
+    background-color: rgb(55,95,122); /* Color de fondo fijo */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Añade relleno para parecer un botón */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que se vea como un botón */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+#entidades a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en el hover */
+}
+
+@media (max-width: 768px) {
+    #entidades table {
+        font-size: 0.9rem;
+    }
+
+    #entidades th, #entidades td {
+        padding: 10px;
+    }
+}
