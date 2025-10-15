@@ -29,9 +29,9 @@
 }
 
 #entidades a {
-    color: #fff; /* Texto blanco */
+    color: #fff !important; /* Fuerza el texto blanco */
     background-color: rgb(55,95,122); /* Color de fondo fijo */
-    text-decoration: none;
+    text-decoration: none !important; /* Evita subrayado incluso en hover */
     font-weight: bold;
     padding: 5px 10px; /* Añade relleno para parecer un botón */
     border-radius: 5px; /* Bordes redondeados */
@@ -41,6 +41,7 @@
 
 #entidades a:hover {
     transform: scale(1.1); /* Aumenta el tamaño en el hover */
+    text-decoration: none !important; /* Asegura que no se subraye en hover */
 }
 
 @media (max-width: 768px) {
